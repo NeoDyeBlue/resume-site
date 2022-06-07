@@ -30,6 +30,13 @@ li {
   font-weight: 400;
 }
 
+#home,
+#about,
+#works,
+#contact {
+  scroll-margin-top: 60px;
+}
+
 .navbar {
   position: -webkit-sticky;
   position: sticky;
@@ -38,7 +45,7 @@ li {
   top: 0;
   left: 0;
   z-index: 9999;
-  background-color: #f1f2f200;
+  background-color: rgba(241, 242, 242, 0);
 }
 
 .container-xxl,

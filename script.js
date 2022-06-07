@@ -5,7 +5,17 @@ const APP = (function () {
 
   var scrollerElement = document.querySelector(".js-scroller");
   var homeSection = document.getElementById("home");
-  var navBar = document.getElementById("nav");
+  var navBar = document.getElementById("nav-container");
+  var menuButton = document.getElementById("menu");
+  var navList = document.getElementById("nav");
+  var navLinks = document.querySelectorAll(".c-nav__link");
+  var menuBars = {
+    first: document.querySelector(".c-hamburger-menu__bar:nth-child(1)"),
+    second: document.querySelector(".c-hamburger-menu__bar:nth-child(2)"),
+    third: document.querySelector(".c-hamburger-menu__bar:nth-child(3)"),
+  };
+
+  var mediaQuery = window.matchMedia("(min-width: 550px)");
 
   var bgTimline = gsap.timeline({
     scrollTrigger: {
@@ -45,17 +55,6 @@ const APP = (function () {
       scrub: true,
     },
   });
-
-  var menuButton = document.getElementById("menu");
-  var navList = document.getElementById("nav");
-  var navLinks = document.querySelectorAll(".c-nav__link");
-  var menuBars = {
-    first: document.querySelector(".c-hamburger-menu__bar:nth-child(1)"),
-    second: document.querySelector(".c-hamburger-menu__bar:nth-child(2)"),
-    third: document.querySelector(".c-hamburger-menu__bar:nth-child(3)"),
-  };
-
-  var mediaQuery = window.matchMedia("(min-width: 550px)");
 
   function init() {
     initializeAnim();

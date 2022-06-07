@@ -47,6 +47,13 @@ li {
   // margin: 0;
 }
 
+#home,
+#about,
+#works,
+#contact {
+  scroll-margin-top: 60px;
+}
+
 //overrides-------------------------------------------
 .navbar {
   position: sticky;
